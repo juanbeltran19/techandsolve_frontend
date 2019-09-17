@@ -1,0 +1,18 @@
+<div align="justify">
+<form [formGroup]="registerForm" (ngSubmit)="procesarArchivo()">
+  <h1> GESTION DE MUDANZAS </h1>
+  <div class="form-group">
+    <label>CEDULA DEL PARTICIPANTE: </label>
+      <input type="number" placeholder="Cedula No." required formControlName="nmDocumento" [(ngModel)]="nmDocumento" />
+  </div><br>
+  <div class="form-group">
+    <label>ARCHIVO A PROCESAR: </label>
+        <input type="file" required formControlName="file" (change)="cargarArchivo($event)" />
+  </div><br>
+  <div class="form-group row">
+      <div class="col-sm-10">
+          <button class="btn btn-primary btn-block">ENVIAR</button>
+      </div>    
+   </div> 
+</form>  
+</div>
